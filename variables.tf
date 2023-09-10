@@ -1,51 +1,51 @@
 variable "project_name" {
   type    = string
-  default = "aks_modules"
+  default     = "put a value"
 }
 
 variable "subscription_id" {
   type    = string
-  default = "367f72ee-5c6f-4c07-b85d-6652ebde98ba"
+  default     = "put a value"
 }
 
 variable "tenant_id" {
   type    = string
-  default = "227c59f6-f5df-49d3-9dd6-b55e2db1e690"
+  default     = "put a value"
 }
 
 variable "resource_group_name" {
   type    = string
-  default = "training"
+  default     = "put a value"
 }
 
 variable "storage_account_name" {
   type    = string
-  default = "scafetrainingsta"
+  default     = "put a value"
 }
 
 variable "container_name" {
   type    = string
-  default = "tsftate"
+  default     = "put a value"
 }
 
 variable "azurerm_key" {
   type    = string
-  default = "tfstate"
+  default     = "put a value"
 }
 
 variable "location" {
   type    = string
-  default = "West Europe"
+  default     = "put a value"
 }
 
 variable "acr_name" {
   type    = string
-  default = "102307121336"
+  default     = "put a value"
 }
 
 variable "storage_account_name_for_persistence" {
   type    = string
-  default = "gsa2307121336"
+  default     = "put a value"
 }
 
 variable "mysql_sku_name" {
@@ -55,17 +55,16 @@ variable "mysql_sku_name" {
 
 variable "mysql_server_name" {
   type = string
-  default = "website2307121336"
+  default     = "put a value"
 }
-
 variable "mysql_username" {
   type    = string
-  default = "scafe_user"
+  default     = "put a value"
 }
 
 variable "mysql_password" {
   type    = string
-  default = "6k2&/M_=yf8<j7<"
+  default     = "put a value"
 }
 
 variable "mysql_storage_mb" {
@@ -110,16 +109,30 @@ variable "mysql_firewall_rules" {
     start_ip_address = string
     end_ip_address   = string
   }))
+   default = {
+
+    clientip = {
+        name             = "gitlabCI"
+        start_ip_address = ""
+        end_ip_address   = ""
+      },
+
+    kubeip = {
+        name             = "KubeIpAddress"
+        start_ip_address = ""
+        end_ip_address   = ""
+      }
+    } 
 }
 
 variable "aks_cluster_name" {
   type = string
-  default = "akscluster2307121336"
+  default = ""
 }
 
 variable "aks_default_node_pool_name" {
   type = string
-  default = "p2307121336"
+  default     = "put a value"
 }
 
 variable "aks_default_node_count" {
@@ -134,7 +147,7 @@ variable "aks_default_node_vm_size" {
 
 variable "aks_node_pool_name" {
   type = string
-  default = "p230712133"
+  default     = "put a value"
 }
 
 variable "aks_node_count" {
@@ -149,17 +162,17 @@ variable "aks_node_vm_size" {
 
 variable "aks_dns_prefix" {
   type = string
-  default = "cluster-dns"
+  default     = "put a value"
 }
 
 variable "resource_group_id" {
   type = string
-  default = "/subscriptions/367f72ee-5c6f-4c07-b85d-6652ebde98ba/resourceGroups/training"
+  default     = "put a value"
 }
 
 variable "keyvault_name" {
   type    = string
-  default = "aks-keyvault"
+  default     = "put a value"
 }
 
 variable "keyvault_enabled_for_disk_encryption" {
@@ -184,41 +197,41 @@ variable "keyvault_sku_name" {
 
 variable "vnet_name" {
   type = string
-  default = "main-vnet"
+  default     = "put a value"
 }
 
 variable "vnet_address_space" {
   type = list(string)
-  default = ["10.1.0.0/16"]
+  default = [""]
 }
 
 variable "aks_subnet_name" {
   type = string
-  default = "aks-subnet"
+  default     = "put a value"
 }
 
 variable "appgw_subnet_name" {
   type = string
-  default = "appgw-subnet"
+  default     = "put a value"
 }
 
 variable "aks_address_subnet_prefixes" {
   type = list(string)
-  default = ["10.1.1.0/24"]
+  default = [""]
 }
 
 variable "appgw_address_prefixes" {
   type = list(string)
-  default = ["10.1.2.0/24"]
+  default = [""]
 }
 
 variable "azurerm_subnet_name" {
   type = string
-  default = "subnet"
+  default = ""
 }
 
 variable "azurerm_subnet_address_prefixes" {
   type = list(string)
-  default = ["10.1.3.0/24"]
+  default = [""]
 }
 
